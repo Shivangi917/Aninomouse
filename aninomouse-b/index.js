@@ -7,10 +7,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-connectDB();
-
 app.use(cors());
 app.use(express.json());
+
+connectDB();
+
 
 app.use('/api/auth', authRoutes);
 
