@@ -1,0 +1,27 @@
+<div class="signup-container">
+  <h2>CREATE ACCOUNT</h2>
+  
+  <form [formGroup]="signupForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="onSubmit()">REGISTER</button>
+
+    <div class="login-link">
+      Already have an account? 
+      <a routerLink="/login">LOGIN</a>
+    </div>
+  </form>
+</div>
